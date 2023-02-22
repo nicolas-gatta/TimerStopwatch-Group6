@@ -10,7 +10,7 @@ class IdleTest {
 	private Context context;
 	
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		// reset the initial values of timer to avoid inferences between different consecutive tests
 		context = new Context();
 		context.currentState = IdleTimer.Instance(); // because we are testing the IdleTimer state here...
