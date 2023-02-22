@@ -1,18 +1,16 @@
 package gui;
 
-import gui.*;
+import org.junit.jupiter.api.BeforeEach;
 import states.Context;
 import states.timer.AbstractTimer;
 
-import org.junit.Before;
-
-public abstract class TestGUIAbstract {
+abstract class TestGUIAbstract {
 
 	protected Context c;
 	protected HeadlessGUI g;
 
-    @Before
-    public void setup() {
+    @BeforeEach
+	void setup() {
     	c = new Context();
 
 		// Run the GUI tests with the HeadlessGUI to ensure that

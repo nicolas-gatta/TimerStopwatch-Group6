@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>umons</groupId>
   <artifactId>TimerStopwatch</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <packaging>jar</packaging>
   <name>TimerStopwatch</name>
 
@@ -11,7 +11,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>17</java.version>
-    <junit.version>4.13.2</junit.version>
+    <junit.version>5.9.2</junit.version>
     <maven.compiler.version>3.10.1</maven.compiler.version>
     <maven.surefire.version>2.22.2</maven.surefire.version>
     <maven.compiler.source>17</maven.compiler.source>
@@ -20,53 +20,41 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
 
-    <build>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>${maven.surefire.version}</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.apache.maven.surefire</groupId>
-              <artifactId>surefire-junit4</artifactId>
-              <version>${maven.surefire.version}</version>
-            </dependency>
-          </dependencies>
-          <configuration>
-            <includes>
-              <include>**/*.java</include>
-            </includes>
-          </configuration>
-        </plugin>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven.surefire.version}</version>
+      </plugin>
 
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>exec-maven-plugin</artifactId>
-          <version>3.1.0</version>
-          <configuration>
-            <mainClass>ChronometerMain</mainClass>
-          </configuration>
-          <executions>
-            <execution>
-              <phase>install</phase>
-              <goals>
-                <goal>java</goal>
-               </goals>
-              <configuration>
-                <mainClass>ChronometerMain</mainClass>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </build>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>ChronometerMain</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>install</phase>
+            <goals>
+              <goal>java</goal>
+             </goals>
+            <configuration>
+              <mainClass>ChronometerMain</mainClass>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

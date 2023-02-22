@@ -1,29 +1,26 @@
 package states;
 
-import states.ClockState;
-import states.Context;
-import states.Mode;
 import states.stopwatch.AbstractStopwatch;
 import states.stopwatch.ResetStopwatch;
 import states.timer.AbstractTimer;
-import org.junit.*;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class StopwatchTests {
+class StopwatchTests {
 
 	private static Context context;
 	private ClockState current, newState;
 
-	@Before
-	public void setup() {
+	@BeforeEach
+	void setup() {
         context = new Context(); // create the state machine context
         AbstractStopwatch.resetInitialValues();
         context.currentState = AbstractStopwatch.Instance();
 	}
 		
-	@Test
-	public void testInitialState() {
+	@org.junit.jupiter.api.Test
+	void testInitialState() {
 		//context.tick(); //no tick() needed for this test;
 		/* When initialising the context (see setup() method above)
 		 * its currentState will be inialised with the initial state
@@ -33,18 +30,18 @@ public class StopwatchTests {
 		
 	    assertEquals(Mode.stopwatch, current.getMode());
 	    assertSame(ResetStopwatch.Instance(), current);
-	    assertEquals("For the value of totalTime we ",0, AbstractStopwatch.getTotalTime());
-	    assertEquals("For the value of lapTime we ",0, AbstractStopwatch.getLapTime());
+	    assertEquals(0, AbstractStopwatch.getTotalTime(),"For the value of totalTime we ");
+	    assertEquals(0, AbstractStopwatch.getLapTime(),"For the value of lapTime we ");
 	}
 
-	@Test
-	public void testInitialAbstractStopwatch() {
+	@org.junit.jupiter.api.Test
+	void testInitialAbstractStopwatch() {
 		// The initial state of composite state AbstractStopwatch should be ResetStopwatch
 		assertSame(AbstractStopwatch.Instance(), ResetStopwatch.Instance());
 	}
 	
 	@Test
-	public void testHistoryState() {		
+	void testHistoryState() {
 		current = AbstractStopwatch.Instance();
 		// after processing the left() event, we should arrive in the initial state of AbstractStopwatch
 		newState = current.left();

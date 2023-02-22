@@ -1,12 +1,12 @@
 package gui;
 
-import static org.junit.Assert.*;
-import org.junit.*;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class TestStopwatchLabels extends TestGUIAbstract {
+class TestStopwatchLabels extends TestGUIAbstract {
 
     @Test
-    public void testStopwatch1() {
+	void testStopwatch1() {
     	c.left(); //simulate clicking on the left button
     	g.updateUI(c); //apply the effect on the user interface
     	assertEquals("change mode",g.b1.getText());     
@@ -18,7 +18,7 @@ public class TestStopwatchLabels extends TestGUIAbstract {
     }
 
     @Test
-    public void testStopwatch2() {
+	void testStopwatch2() {
     	c.left(); //simulate clicking on the left button
     	c.up(); //simulate clicking on the right button
     	g.updateUI(c); //apply the effect on the user interface
