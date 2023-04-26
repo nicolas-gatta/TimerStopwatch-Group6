@@ -32,7 +32,7 @@ The code can be compiled, tested and executed with maven:
 ## Built With
 
 *  [Maven](https://maven.apache.org/) - an open source build automation and dependency management tool
-*  [JUnit4](https://junit.org/junit4/) - a unit testing framework for Java
+*  [JUnit5](https://junit.org/junit5/) - a unit testing framework for Java
 
 ## Acknowledgments
 
