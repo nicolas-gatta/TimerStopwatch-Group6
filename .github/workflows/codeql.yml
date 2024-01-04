@@ -22,11 +22,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Set up with Java 21
+    - name: Set up with Java 17
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: 21
+        java-version: 17
         cache: 'maven'
 
     - name: Initialize CodeQL for security scanning
