@@ -1,4 +1,5 @@
-Code quality: ![Maven Build](https://github.com/tommens/calculator-cucumber/actions/workflows/maven.yml/badge.svg)
+Code quality: ![Maven Build](https://github.com/ecos-umons/TimerStopwatch/actions/workflows/maven.yml/badge.svg)
+![CodeQL](https://github.com/ecos-umons/TimerStopwatch/actions/workflows/codeql.yml/badge.svg)
 
 # TimerStopwatch
 Java implementation of a statechart with Timer and Stopwatch functionality.
