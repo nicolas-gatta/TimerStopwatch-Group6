@@ -36,6 +36,10 @@ The code can be compiled, tested and executed with maven:
 *  [Maven](https://maven.apache.org/) - an open source build automation and dependency management tool
 *  [JUnit5](https://junit.org/junit5/) - a unit testing framework for Java
 
+## License
+
+Source code distributed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
+
 ## Acknowledgments
 
 * Software Engineering Lab, Faculty of Sciences, University of Mons, Belgium.
