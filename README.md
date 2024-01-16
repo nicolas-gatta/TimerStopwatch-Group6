@@ -15,7 +15,7 @@ and how to test them with JUnit unit tests.
 
 ### Video Tutorial
 See https://www.youtube.com/watch?v=5uYOPUj5J3Q
-for a tutorial on YouTube that explains (a perhaps slightly older version of) this example Java source code.
+for a tutorial on YouTube that explains (a slightly older version of) this example Java source code.
 
 ### Prerequisites
 
