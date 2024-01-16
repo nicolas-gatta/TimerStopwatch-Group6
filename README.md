@@ -1,4 +1,5 @@
-Code quality: ![Maven Build](https://github.com/ecos-umons/TimerStopwatch/actions/workflows/maven.yml/badge.svg)
+[![](https://img.shields.io/github/v/release/ecos-umons/TimerStopwatch?label=Latest%20Release)](https://github.com/ecos-umons/TimerStopwatch/releases/latest)
+![Maven Build](https://github.com/ecos-umons/TimerStopwatch/actions/workflows/maven.yml/badge.svg)
 ![CodeQL](https://github.com/ecos-umons/TimerStopwatch/actions/workflows/codeql.yml/badge.svg)
 
 # TimerStopwatch
