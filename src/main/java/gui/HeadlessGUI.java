@@ -14,12 +14,17 @@ import javax.swing.JLabel;
  * on remote servers that do not have a screen, without getting a Headless exception error.
  * In order to create a real Swing GUI, use the SwingGUI subclass of HeadlessGUI.
  */
-public class HeadlessGUI extends AbstractGUI {
+public class HeadlessGUI {
 
     public JButton b1, b2, b3;
     public JLabel myText1, myText2, myText3;
 
-    public HeadlessGUI(EventListener o) { super(o); }
+    protected EventListener observer;
+
+    public HeadlessGUI(EventListener o) {
+        observer = o;
+        initGUI();
+        addEventListener(); }
     
     protected void initGUI() {
         //Notice that we initialise three buttons and three labels but we never display them.

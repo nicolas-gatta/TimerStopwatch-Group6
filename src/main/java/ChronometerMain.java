@@ -1,10 +1,9 @@
-import gui.AbstractGUI;
 import gui.SwingGUI;
 import states.Context;
 
 public class ChronometerMain {
     
-	private AbstractGUI g;
+	private SwingGUI g;
 	private Context c;
    	
     // The method run() ensures that with a given frequency
