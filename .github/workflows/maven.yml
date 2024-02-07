@@ -15,9 +15,12 @@ on:
 
 jobs:
 
-  # first job starts here
   build:
-    
+
+    permissions:
+      #write permission needed for updating dependency graph
+      contents: write
+
     runs-on: ubuntu-latest
 
     steps:
@@ -33,17 +36,7 @@ jobs:
         
     - name: Build with Maven (includes running all tests)
       run: mvn -B package --file pom.xml
-      
-  # second job starts here    
-  depgraph:
- 
-    runs-on: ubuntu-latest
-
-    permissions:
-      #write permission needed for updating dependency graph
-      contents: write
-      
-    steps:
-      # Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-      - name: Update dependency graph
-        uses: advanced-security/maven-dependency-submission-action@ed72a3242c5331913886b41ca9ea66c9195ebdaa # v4.0.0
+            
+    # Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
+    - name: Update dependency graph
+      uses: advanced-security/maven-dependency-submission-action@ed72a3242c5331913886b41ca9ea66c9195ebdaa # v4.0.0
