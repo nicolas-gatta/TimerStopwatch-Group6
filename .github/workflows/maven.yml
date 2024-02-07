@@ -4,7 +4,7 @@
 name: Java CI with Maven
 
 permissions:
-  #set default workflow permissions to read-only for security reasons
+  # set default workflow permissions to read-only for security reasons
   contents: read
   
 on:
