@@ -17,11 +17,15 @@ jobs:
 
   build:
 
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+    
     permissions:
       #write permission needed for updating dependency graph
       contents: write
-
-    runs-on: ubuntu-latest
 
     steps:
     - name: Harden Runner
