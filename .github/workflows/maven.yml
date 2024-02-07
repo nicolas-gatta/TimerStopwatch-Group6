@@ -1,8 +1,10 @@
-# Build and test a Java project with Maven, and update the maven dependency graph
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
 
 name: Java CI with Maven
 
 permissions:
+  # set default workflow permissions to read-only for security reasons
   contents: read
   
 on:
@@ -12,7 +14,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  #first job
+
+  # first job starts here
   build:
     
     runs-on: ubuntu-latest
@@ -31,15 +34,16 @@ jobs:
     - name: Build with Maven (includes running all tests)
       run: mvn -B package --file pom.xml
       
- #second job     
- depgraph:
+  # second job starts here    
+  depgraph:
  
-   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-   permissions:
-    #write permission needed for updating dependency graph
-    contents: write
-
-    # Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@ed72a3242c5331913886b41ca9ea66c9195ebdaa # v4.0.0
+    permissions:
+      #write permission needed for updating dependency graph
+      contents: write
+      
+    steps:
+      # Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
+      - name: Update dependency graph
+        uses: advanced-security/maven-dependency-submission-action@ed72a3242c5331913886b41ca9ea66c9195ebdaa # v4.0.0
