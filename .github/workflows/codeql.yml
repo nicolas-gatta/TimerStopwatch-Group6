@@ -38,7 +38,7 @@ jobs:
         cache: 'maven'
 
     - name: Initialize CodeQL for security scanning
-      uses: github/codeql-action/init@47b3d888fe66b639e431abf22ebca059152f1eea # v3.24.5
+      uses: github/codeql-action/init@8a470fddafa5cbb6266ee11b37ef4d8aae19c571 # v3.24.6
       with:
         languages: 'java-kotlin'
         
@@ -47,7 +47,7 @@ jobs:
       # unit tests are not run since they are not required for the CodeQL security analysis
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@47b3d888fe66b639e431abf22ebca059152f1eea # v3.24.5
+      uses: github/codeql-action/analyze@8a470fddafa5cbb6266ee11b37ef4d8aae19c571 # v3.24.6
       with:
         category: "/language:java-kotlin"
         
