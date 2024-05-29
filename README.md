@@ -2,6 +2,7 @@
 ![Maven Build](https://github.com/ecos-umons/TimerStopwatch/actions/workflows/maven.yml/badge.svg)
 ![CodeQL](https://github.com/ecos-umons/TimerStopwatch/actions/workflows/codeql.yml/badge.svg)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/ecos-umons/TimerStopwatch/badge)](https://securityscorecards.dev/viewer/?uri=github.com/ecos-umons/TimerStopwatch)
+[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/ecos-umons/TimerStopwatch/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/ecos-umons/TimerStopwatch)
 
 # TimerStopwatch
 Java implementation of a statechart with Timer and Stopwatch functionality.
