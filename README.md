@@ -8,7 +8,7 @@
 Java implementation of a statechart with Timer and Stopwatch functionality.
 This repository contains a simple example used for teaching purposes by Tom Mens at the University of Mons.
 The example is an event-based application for a timer and stopwatch. It can be controlled through 3 buttons/events.
-The example comes with UML models (created with Visual Paradigm) and executable statechart models (created with Yakindu).
+The example comes with UML models (created with Visual Paradigm) and executable statechart models (made with Itemis Create).
 
 The aim of the example is to illustrate how to model composite statecharts, 
 how to implement them in Java in object-oriented style using the State Design Pattern,
@@ -21,7 +21,7 @@ for a tutorial on YouTube that explains (a slightly older version of) this examp
 
 ### Prerequisites
 
-*  You will need to have a running version of Java 17 on your machine in order to be able to compile and execute this code.
+*  You will need to have a running version of Java 21 on your machine in order to be able to compile and execute this code.
 *  You will also need to have a running version of Maven, since this project is accompanied by a pom.xml file so that it can be installed, compiled, tested and run using Maven.
 
 ### Installation and testing instructions
