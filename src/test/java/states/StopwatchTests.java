@@ -76,6 +76,10 @@ class StopwatchTests {
 
 		// Verify that the transition is to RunningStopwatch
 		assertSame(RunningStopwatch.Instance(), newState, "Pressing 'up' should transition to RunningStopwatch.");
+
+		// Verify that the transition is to RunningStopwatch
+		assertEquals("split", newState.getUpText(), "getUpText() should return 'running'.");
+
 	}
 
 	@Test
