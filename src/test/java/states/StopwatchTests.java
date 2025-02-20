@@ -55,7 +55,7 @@ class StopwatchTests {
 	}
 
 	@Test
-	void testRightTransition() {
+	void testRunningRightTransition() {
 		// Start in RunningStopwatch state
 		current = RunningStopwatch.Instance();
 
@@ -67,7 +67,7 @@ class StopwatchTests {
 	}
 
 	@Test
-	void testUpTransition() {
+	void testLaptimeUpTransition() {
 		// Start in LaptimeStopwatch state
 		current = LaptimeStopwatch.Instance();
 
@@ -83,7 +83,7 @@ class StopwatchTests {
 	}
 
 	@Test
-	void testGetUpText() {
+	void testLaptimeGetUpText() {
 		// Instance of LaptimeStopwatch
 		current = LaptimeStopwatch.Instance();
 
@@ -92,7 +92,7 @@ class StopwatchTests {
 	}
 
 	@Test
-	void testGetDisplayString() {
+	void testLaptimeGetDisplayString() {
 		// Instance of LaptimeStopwatch
 		current = LaptimeStopwatch.Instance();
 
@@ -110,7 +110,8 @@ class StopwatchTests {
 		// Simulate the entry action that sets lapTime
 		current.entry();
 
-		assertEquals(RunningStopwatch.Instance(), newState, "Calling doIt() * 5 should return RunningStopwatch.");
+		assertSame(RunningStopwatch.Instance(), newState, "Calling doIt() * 5 should return RunningStopwatch.");
+
 		// Verify the output format
 		assertEquals("lapTime = 5", current.getDisplayString(), "getDisplayString() should return 'lapTime = X' where X is the lap time.");
 	}
